@@ -1,0 +1,20 @@
+Ignore virtual env in any main or sub directory
+
+**/venv/
+**/.venv/
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Build artifacts
+/build/
+/dist/
+
+
+
+# Logs and databases
+*.log
