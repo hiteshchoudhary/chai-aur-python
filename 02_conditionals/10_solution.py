@@ -9,3 +9,5 @@ elif species == "Cat" and age < 5:
     print("Kitten food")
 elif species == "Cat" and age > 5: 
     print("Senior Cat food")
+else: 
+    print("Invalid species and age")
