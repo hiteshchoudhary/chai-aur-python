@@ -1,7 +1,5 @@
-def multiply(p1, p2):
-    return p1 * p2
+def multiply(input1, input2):
 
+    return input1*input2
 
-print(multiply(8, 5))
-print(multiply('a', 5))
-print(multiply(5, 'a'))
+print(multiply(3, 'a'))

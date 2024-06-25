@@ -1,5 +1,4 @@
-def add(numOne, numTwo):
-    return numOne + numTwo
+def two_Num(num1, num2):
+    return num1 + num2
 
-
-print(add(5, 5))
+print(two_Num(23,34))

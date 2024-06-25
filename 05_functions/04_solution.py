@@ -1,10 +1,11 @@
 import math
 
-def circle_stats(radius):
-    area = math.pi * radius ** 2
-    circumference = 2 * math.pi * radius
-    return area, circumference
+def cicle(radius):
 
-a, c = circle_stats(3)
-
-print("Area: ", a, "Circumference: ", c)
+    area = math.pi * radius**2
+    circumference =2* math.pi * radius
+    rad = round(area,2)
+    circumference=round(circumference,2)
+    return rad,circumference
+    
+print(cicle(5))

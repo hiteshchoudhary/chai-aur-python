@@ -13,25 +13,14 @@ class Car:
         return f"{self.__brand} {self.__model}"
     
     def fuel_type(self):
-        return "Petrol or Diesel"
+        return "Petrol or diesel"
     
-    @staticmethod
-    def general_description():
-        return "Cars are means of transport"
-    
-    @property
-    def model(self):
-        return self.__model
-    
-
-
-class ElectricCar(Car):
-    def __init__(self, brand, model, battery_size):
-        super().__init__(brand, model)
+class ElectricCar:
+    def __init__(self,brand,model,battery_size):
+        super().__init__(brand,model)
         self.battery_size = battery_size
-
-    def fuel_type():
-        return "Electric charge"
+    def fuel_type(self):
+        retun = "Electric Charges"
 
 
 # my_tesla = ElectricCar("Tesla", "Model S", "85kWh")
