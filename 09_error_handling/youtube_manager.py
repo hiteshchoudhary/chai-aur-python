@@ -17,9 +17,12 @@ def save_data_helper(videos):
 def list_all_videos(videos):
     print("\n")
     print("*" * 70)
-    for index, video in enumerate(videos, start=1):
-        print(f"{index}. {video['name']}, Duration: {video['time']} ")
-    print("\n")
+    if videos:
+        for index, video in enumerate(videos, start=1):
+            print(f"{index}. {video['name']}, Duration: {video['time']}")
+    else:
+        print("No videos found")
+
     print("*" * 70)
 
 def add_video(videos):
@@ -29,23 +32,35 @@ def add_video(videos):
     save_data_helper(videos)
 
 def update_video(videos):
+    if not videos:
+        print("No video found to update.")
+        return  # Exit the function early since there's nothing to update
+
     list_all_videos(videos)
-    index = int(input("Enter the video number to update"))
-    if 1 <= index <= len(videos):
-        name = input("Enter the new video name")
-        time = input("Enter the new video time")
-        videos[index-1] = {'name':name, 'time': time}
-        save_data_helper(videos)
-    else:
-        print("Invalid index selected")
+    try:
+        index = int(input("Enter the video number to update: "))
+        if 1 <= index <= len(videos):
+            name = input("Enter the new video name: ")
+            time = input("Enter the new video time: ")
+            videos[index - 1] = {'name': name, 'time': time}
+            save_data_helper(videos)
+        else:
+            print("Invalid index selected.")
+    except ValueError:
+        print("Please enter a valid number.")
+
 
 
 def delete_video(videos):
+    if not videos:
+        print("No video found to delete.")
+        return  # Exit the function early since there's nothing to delete
     list_all_videos(videos)
-    index = int(input("Enter the video number to be deleted"))
+    index = int(input("Enter the video number to be deleted: "))
     
     if 1<= index <= len(videos):
         del videos[index-1]
+        print("Video deleted successfully")
         save_data_helper(videos)
     else:
         print("Invalid video index selected")
@@ -79,5 +94,4 @@ def main():
 
 if __name__ ==  "__main__":
     main() 
-
 
