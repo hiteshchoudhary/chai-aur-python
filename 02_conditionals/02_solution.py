@@ -28,26 +28,3 @@ else:
         print(f"Ticket price for you is ${price}")
     else:
         print(f"Ticket price for you is ${8}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
